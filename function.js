@@ -21,14 +21,27 @@ console.log(propertyDescriptor.set.name); // set age
 function sayHi(name, message) {
   console.log(`${name} and ${message}`)
 }
+
 function sayHiByArguments() {
   console.log(`${arguments[0]} and ${arguments[1]}`);
 }
 sayHi('zjr', 'love life')
 sayHiByArguments('wes', 'love yourself')
 
-function doAdd(num1, num2) {arguments[1] = 10;
+function doAdd(num1, num2) {
+  arguments[1] = 10;
   num1 = 20;
   console.log(arguments[0] + num2);
 }
 doAdd(1, 2)
+
+function turnOn(machine) {
+  console.log(typeof machine)
+  machine.isOn = true}
+var computer = {
+  isOn: false
+};
+
+turnOn(computer);
+
+console.log(computer.isOn); // false;
