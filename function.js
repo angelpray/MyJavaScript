@@ -1,4 +1,3 @@
-"strict mode"
 console.log((() => {}).name); // (empty string)
 console.log((new Function()).name); // anonymous
 
@@ -17,7 +16,7 @@ let propertyDescriptor = Object.getOwnPropertyDescriptor(dog, 'age');
 console.log(propertyDescriptor.get.name); // get age
 console.log(propertyDescriptor.set.name); // set age
 
-// arguments访问参数
+// use arguments to access parameters
 function sayHi(name, message) {
   console.log(`${name} and ${message}`)
 }
@@ -45,3 +44,17 @@ var computer = {
 turnOn(computer);
 
 console.log(computer.isOn); // false;
+
+// DEFAULT PARAMETER VALUE
+function sayhello(name) {
+  name = (typeof name !== 'undefined') ? name : 'iox'
+  return name;
+}
+var a = sayhello()
+var b = sayhello('ols')
+
+console.log(`a=${a}b=${b}`)
+
+function sayhello(name = 'iox') {
+  return name;
+}
