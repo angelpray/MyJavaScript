@@ -108,3 +108,11 @@ spread运算符可以用作标准函数和箭头函数中的命名参数，也�
 在编写函数定义时，可以使用spread运算符将可变长度的参数范围合并到单个数组中，而不是单独处理参数。在很多方面，这与arguments对象的工作方式非常相似，但在本例中，rest参数变成了一个正式的Array对象。
 
 如果在REST参数之前有命名参数，它将采用其余未命名参数的大小，如果没有未命名参数，则为空数组。
+
+因为rest参数的大小可变，因此你只能将其用作最后一个形式参数。
+
+虽然箭头函数不支持arguments对象，但支持REST参数，这为我们提供了与arguments对象极其相似的行为。
+
+使用REST参数不会影响arguments对象，arguments对象还是会准确反映传递给函数的参数内容。
+
+## FUNCTION DECLARATION VERSUS FUNCTION EXPRESSION
