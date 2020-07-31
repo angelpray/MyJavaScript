@@ -12,6 +12,7 @@ let dog = {
     this.years = newAge;
   }
 }
+
 let propertyDescriptor = Object.getOwnPropertyDescriptor(dog, 'age');
 console.log(propertyDescriptor.get.name); // get age
 console.log(propertyDescriptor.set.name); // set age
@@ -58,3 +59,18 @@ console.log(`a=${a}b=${b}`)
 function sayhello(name = 'iox') {
   return name;
 }
+
+// function expressions versus function declaration
+
+let fn_exp = function(msg) {
+  console.log(msg);
+}
+fn_exp();
+
+function fn_declara(msg) {
+  console.log(msg);
+}
+fn_declara();
+
+// named function expression
+let fn_named_exp = function(){};

@@ -116,3 +116,11 @@ spread运算符可以用作标准函数和箭头函数中的命名参数，也�
 使用REST参数不会影响arguments对象，arguments对象还是会准确反映传递给函数的参数内容。
 
 ## FUNCTION DECLARATION VERSUS FUNCTION EXPRESSION
+
+在执行代码之前，函数声明在执行上下文中读取并可用，而函数表达式直到执行到该行代码时才完成。
+
+在代码开始运行之前，通过函数声明提升（function declaration hositing）将函数声明读取并添加到执行上下文中（execution context）。
+
+在评估代码时，JavaScript引擎对函数声明执行第一次遍历，并将它们放到代码的顶部。因此，即使函数声明在代码中使用之后出现，引擎也会将函数声明提升到顶部。
+
+可以有看起来像函数声明的命名函数表达式，但无法实现函数声明提升。
