@@ -1,5 +1,4 @@
 function factorial(num) {
-  console.log(this)
   if (num <= 1) {
     return 1;
   } else {
