@@ -161,4 +161,11 @@ ES5还形式化了函数对象的一个附加属性:caller.它包含对调用此
 
 ### new.target
 
+函数总是能够充当实例化新对象的构造函数,又充当普通的可调用的函数.
+
+ES6中的新增功能是使用new.target确定是否使用new关键字调用了函数.如果正常调用函数new.target是undefined的.如果使用new关键字调用函数,new.target将引用构造函数或函数(也就是引用自身).
+
+## FUNCTION PROPERTIES AND METHODS
+
+
 
