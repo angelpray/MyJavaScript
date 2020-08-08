@@ -1,0 +1,3 @@
+function outterFunction() {
+  return innerFunction()
+}
